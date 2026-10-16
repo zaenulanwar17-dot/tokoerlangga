@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-sage-50: #f4f7f1;
+  --color-sage-100: #e5ecdf;
+  --color-sage-300: #b4c5aa;
+  --color-sage-500: #78916f;
+  --color-sage-700: #43583e;
+
+  --color-magenta-50: #fff0f7;
+  --color-magenta-300: #f08abb;
+  --color-magenta-500: #d63384;
+  --color-magenta-700: #9f1d5d;
+
+  --color-ink: #191919;
+  --color-ink-soft: #343434;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #ffffff;
+  --color-canvas: #f8f9f7;
+
+  --color-success: #287d4a;
+  --color-warning: #a16207;
+  --color-danger: #b42318;
+  --color-info: #2459a9;
+}
+
+/* Custom styling for print receipts */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Tabular figures for readable numbers and prices */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
